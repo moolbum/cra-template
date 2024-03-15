@@ -1,20 +1,25 @@
-import React from 'react';
-import { LogoSvg } from '@assets/icons';
-import './App.css';
+import React, { useState } from 'react';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
+import publicRoute from '@routes/public';
+import { GlobalStyle, dark, light } from './styles';
+
+const router = createBrowserRouter([...publicRoute]);
 
 function App() {
+  const [themeMode, setThemeMode] = useState<'light' | 'dark'>('light');
+  const theme = themeMode === 'light' ? light : dark;
+
+  const toggleTheme = () => setThemeMode(themeMode === 'light' ? 'dark' : 'light'); // 테마 변경하기 이벤트
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={LogoSvg} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ThemeProvider theme={theme}>
+        <button onClick={toggleTheme}>Test</button>
+        <GlobalStyle />
+        <RouterProvider router={router} />
+      </ThemeProvider>
+    </>
   );
 }
 
