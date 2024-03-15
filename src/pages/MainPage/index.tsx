@@ -15,7 +15,7 @@ export default MainPage;
 
 const TitleContainer = styled.div`
   width: 100%;
-  background: ${props => props.theme.colors.white};
+  background: ${({ theme }) => theme.colors.white};
 `;
 
 const Title = styled.h1``;

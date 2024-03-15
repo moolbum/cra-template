@@ -1,13 +1,16 @@
-export const dark = {
+export const darkMode = {
   colors: {
     white: '#000000',
     black: '#ffffff',
   },
 };
 
-export const light = {
+export const lightMode = {
   colors: {
     white: '#ffffff',
     black: '#000000',
   },
 };
+
+export type ColorTypes = typeof lightMode;
+export type Colors = keyof (typeof lightMode)['colors'];
