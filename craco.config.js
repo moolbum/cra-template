@@ -9,21 +9,21 @@ module.exports = {
         overrideWebpackConfig: ({ webpackConfig }) => {
           webpackConfig.resolve.plugins.push(new TsconfigPathsPlugin({}));
           return webpackConfig;
-        },
-      },
+        }
+      }
     },
     {
       plugin: CracoEnvPlugin,
       options: {
-        variables: {},
-      },
+        variables: {}
+      }
     },
     {
       plugin: CracoAlias,
       options: {
         source: 'tsconfig',
-        tsConfigPath: 'tsconfig.paths.json',
-      },
-    },
-  ],
+        tsConfigPath: 'tsconfig.paths.json'
+      }
+    }
+  ]
 };
