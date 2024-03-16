@@ -4,7 +4,7 @@ export const fontWeights = {
   regular: 400,
   medium: 500,
   semibold: 600,
-  bold: 700,
+  bold: 700
 };
 
 export const getFontFamily = (fontWeight?: keyof typeof fontWeights) => {
@@ -100,7 +100,7 @@ export const typography = {
   b7: css`
     font-size: 11px;
     line-height: 1.5;
-  `,
+  `
 };
 
 export type TypographyType = keyof typeof typography;
