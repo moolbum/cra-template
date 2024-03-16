@@ -10,10 +10,10 @@ const publicRoute: RouteObject[] = [
     children: [
       {
         path: PATH.MAIN,
-        element: <MainPage />,
-      },
-    ],
-  },
+        element: <MainPage />
+      }
+    ]
+  }
 ];
 
 export default publicRoute;
