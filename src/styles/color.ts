@@ -14,3 +14,4 @@ export const lightMode = {
 
 export type ColorTypes = typeof lightMode;
 export type Colors = keyof (typeof lightMode)['colors'];
+export type ThemeTypes = 'darkMode' | 'lightMode';

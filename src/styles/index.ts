@@ -6,4 +6,4 @@ export { MediaQuery, breakpoints } from './mediaQuery';
 
 export type { TypographyType } from './typography';
 export type { ZIndexType } from './zIndex';
-export type { ColorTypes, Colors } from './color';
+export type { ColorTypes, Colors, ThemeTypes } from './color';

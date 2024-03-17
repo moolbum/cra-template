@@ -1,19 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import publicRoute from '@routes/public';
-import { GlobalStyle, darkMode, lightMode } from './styles';
+import useTheme from './store/theme';
+import { GlobalStyle } from './styles';
 
 const router = createBrowserRouter([...publicRoute]);
 
 function App() {
-  const [themeMode, setThemeMode] = useState(lightMode);
-  const toggleTheme = () => setThemeMode(themeMode === lightMode ? darkMode : lightMode);
+  const { theme, themeActions } = useTheme();
 
   return (
     <>
-      <ThemeProvider theme={themeMode}>
-        <button onClick={toggleTheme}>Test</button>
+      <ThemeProvider theme={theme.value}>
+        <button onClick={themeActions.themeToggle}>Test</button>
         <GlobalStyle />
         <RouterProvider router={router} />
       </ThemeProvider>
