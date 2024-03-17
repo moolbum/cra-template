@@ -22,4 +22,4 @@ export const lightMode = {
   ...commonTheme,
 };
 
-export type ColorTypes = typeof lightMode;
+export type ThemeTypes = typeof lightMode;

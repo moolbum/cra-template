@@ -1,5 +1,5 @@
-import { ColorTypes } from '@styles/index';
+import { ThemeTypes } from '@styles/index';
 
 declare module 'styled-components' {
-  export interface DefaultTheme extends ColorTypes {}
+  export interface DefaultTheme extends ThemeTypes {}
 }

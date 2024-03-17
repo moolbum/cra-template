@@ -1,8 +1,8 @@
 import { create } from 'zustand';
-import { ColorTypes, darkMode, lightMode } from '@styles/index';
+import { ThemeTypes, darkMode, lightMode } from '@styles/index';
 
 type ThemeState = {
-  theme: { value: ColorTypes };
+  theme: { value: ThemeTypes };
   themeActions: {
     lightMode: () => void;
     darkMode: () => void;
